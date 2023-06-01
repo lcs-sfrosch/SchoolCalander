@@ -11,7 +11,7 @@ import SwiftUI
 struct SchoolCalanderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            mainView()
         }
     }
 }

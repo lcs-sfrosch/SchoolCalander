@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		99D93C282A26BF78003F421F /* SchoolCalanderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */; };
-		99D93C2A2A26BF78003F421F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D93C292A26BF78003F421F /* ContentView.swift */; };
 		99D93C2C2A26BF79003F421F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2B2A26BF79003F421F /* Assets.xcassets */; };
 		99D93C2F2A26BF79003F421F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2E2A26BF79003F421F /* Preview Assets.xcassets */; };
+		99D93C362A26C93E003F421F /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D93C352A26C93E003F421F /* mainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99D93C242A26BF78003F421F /* SchoolCalander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCalander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCalanderApp.swift; sourceTree = "<group>"; };
-		99D93C292A26BF78003F421F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99D93C2B2A26BF79003F421F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D93C2E2A26BF79003F421F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99D93C352A26C93E003F421F /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +32,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9995ABC92A28173300E87364 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99D93C352A26C93E003F421F /* mainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		99D93C1B2A26BF78003F421F = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */,
-				99D93C292A26BF78003F421F /* ContentView.swift */,
+				9995ABC92A28173300E87364 /* Views */,
 				99D93C2B2A26BF79003F421F /* Assets.xcassets */,
 				99D93C2D2A26BF79003F421F /* Preview Content */,
 			);
@@ -137,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D93C2A2A26BF78003F421F /* ContentView.swift in Sources */,
 				99D93C282A26BF78003F421F /* SchoolCalanderApp.swift in Sources */,
+				99D93C362A26C93E003F421F /* mainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
