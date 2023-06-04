@@ -12,64 +12,68 @@ struct mainView: View {
     let classes = ["Math", "Science", "History", "English"]
     
     var body: some View {
-        VStack {
-            HStack{
-                Text("Calendar")
-                    .font(.largeTitle)
-                Spacer()
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.accentColor)
-                    .padding()
-                
-                
-            }
-            .frame(width:350, height: 10)
-            
-            
-            
-            HStack{
-                NavigationLink(destination: CalendarView()) {
-                    RoundedRectangle(cornerRadius: 10)
-                        .strokeBorder(Color.black, lineWidth: 2)
-                        .cornerRadius(10)
-                        .frame(width: 350, height: 150)
-                        .padding()
-                }
-            }
-            
-            HStack{
-                
-                Text("Classes")
-                    .font(.largeTitle)
-                Spacer()
-            }
-            .frame(width: 350, height: 20)
-            
+        
+        NavigationView {
             VStack {
+                HStack{
+                    Text("Calendar")
+                        .font(.largeTitle)
+                    Spacer()
+                    Image(systemName: "plus")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.accentColor)
+                        .padding()
+                    
+                    
+                }
+                .frame(width:350, height: 10)
                 
-                List {
-                    ScrollView {
-                        
-                        ForEach(items.indices, id: \.self){ index in
-                            RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color.black, lineWidth: 2)
-                                .cornerRadius(10)
-                                .frame(width:350, height: 75)
-                            
-                            
-                        }
+                
+                
+                HStack{
+                    NavigationLink(destination: CalendarView()) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(Color.black, lineWidth: 2)
+                            .cornerRadius(10)
+                            .frame(width: 350, height: 150)
+                            .padding()
                     }
                 }
-                .listStyle(.plain)
-                .listRowInsets(EdgeInsets())
+                
+                HStack{
+                    
+                    Text("Classes")
+                        .font(.largeTitle)
+                    Spacer()
+                }
+                .frame(width: 350, height: 20)
+                
+                VStack {
+                    
+                    List {
+                        ScrollView {
+                            
+                            ForEach(items.indices, id: \.self){ index in
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(Color.black, lineWidth: 2)
+                                    .cornerRadius(10)
+                                    .frame(width:350, height: 75)
+                                
+                                
+                            }
+                        }
+                    }
+                    .listStyle(.plain)
+                    .listRowInsets(EdgeInsets())
+                    
+                }
+                
+                .frame(width:350, height: 500)
+                .cornerRadius(10)
                 
             }
-            
-            .frame(width:350, height: 500)
-            .cornerRadius(10)
-            
+
         }
     }
     
