@@ -9,6 +9,7 @@ import SwiftUI
 
 struct mainView: View {
     let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10"]
+    let classes = ["Math", "Science", "History", "English"]
     
     var body: some View {
         VStack {
@@ -29,33 +30,49 @@ struct mainView: View {
             
             
             HStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(Color.gray, lineWidth: 2)
-                    .frame(width:350, height: 150)
-                    .padding()
+                NavigationLink(destination: CalendarView()) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(Color.black, lineWidth: 2)
+                        .cornerRadius(10)
+                        .frame(width: 350, height: 150)
+                        .padding()
+                }
             }
+            
+            HStack{
+                
+                Text("Classes")
+                    .font(.largeTitle)
+                Spacer()
+            }
+            .frame(width: 350, height: 20)
             
             VStack {
                 
                 List {
                     ScrollView {
-                        ForEach(items, id: \.self) { item in
-                            
+                        
+                        ForEach(items.indices, id: \.self){ index in
                             RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color.gray, lineWidth: 2)
+                                .strokeBorder(Color.black, lineWidth: 2)
+                                .cornerRadius(10)
                                 .frame(width:350, height: 75)
+                            
                             
                         }
                     }
                 }
-                
                 .listStyle(.plain)
+                .listRowInsets(EdgeInsets())
+                
             }
+            
             .frame(width:350, height: 500)
             .cornerRadius(10)
             
         }
     }
+    
     
     struct mainView_Previews: PreviewProvider {
         static var previews: some View {
@@ -63,4 +80,5 @@ struct mainView: View {
         }
     }
 }
+
 
