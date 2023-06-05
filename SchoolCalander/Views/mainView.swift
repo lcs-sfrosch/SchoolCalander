@@ -32,7 +32,7 @@ struct mainView: View {
                 
                 
                 HStack{
-                    NavigationLink(destination: CalendarView()) {
+                    NavigationLink(destination: calendarView()) {
                         RoundedRectangle(cornerRadius: 10)
                             .strokeBorder(Color.black, lineWidth: 2)
                             .cornerRadius(10)
