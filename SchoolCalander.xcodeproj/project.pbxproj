@@ -57,15 +57,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		99585AA52A2EDB960026DF58 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				99585A982A2ED0020026DF58 /* calendaritemView.swift */,
+				99585A962A2ECE640026DF58 /* addcalendarView.swift */,
+				99FC0DE92A2E10E300FDF879 /* calendarView.swift */,
+			);
+			path = calendar;
+			sourceTree = "<group>";
+		};
+		99585AA62A2EDBB40026DF58 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				99585AA32A2EDA0A0026DF58 /* classItemView.swift */,
+				99585A9B2A2ED7990026DF58 /* addClassview.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
 		9995ABC92A28173300E87364 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				99D93C352A26C93E003F421F /* mainView.swift */,
-				99FC0DE92A2E10E300FDF879 /* calendarView.swift */,
-				99585A962A2ECE640026DF58 /* addcalendarView.swift */,
-				99585A9B2A2ED7990026DF58 /* addClassview.swift */,
-				99585A982A2ED0020026DF58 /* calendaritemView.swift */,
-				99585AA32A2EDA0A0026DF58 /* classItemView.swift */,
+				99585AA52A2EDB960026DF58 /* calendar */,
+				99585AA62A2EDBB40026DF58 /* class */,
 				99585A9A2A2ED4620026DF58 /* Model */,
 			);
 			path = Views;
