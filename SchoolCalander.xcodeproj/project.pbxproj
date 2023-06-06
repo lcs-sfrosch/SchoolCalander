@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99585A972A2ECE650026DF58 /* addcalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99585A962A2ECE640026DF58 /* addcalendarView.swift */; };
+		99585A992A2ED0020026DF58 /* calendaritemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99585A982A2ED0020026DF58 /* calendaritemView.swift */; };
 		99D93C282A26BF78003F421F /* SchoolCalanderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */; };
 		99D93C2C2A26BF79003F421F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2B2A26BF79003F421F /* Assets.xcassets */; };
 		99D93C2F2A26BF79003F421F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2E2A26BF79003F421F /* Preview Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99585A962A2ECE640026DF58 /* addcalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addcalendarView.swift; sourceTree = "<group>"; };
+		99585A982A2ED0020026DF58 /* calendaritemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendaritemView.swift; sourceTree = "<group>"; };
 		99D93C242A26BF78003F421F /* SchoolCalander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolCalander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCalanderApp.swift; sourceTree = "<group>"; };
 		99D93C2B2A26BF79003F421F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 			children = (
 				99D93C352A26C93E003F421F /* mainView.swift */,
 				99FC0DE92A2E10E300FDF879 /* calendarView.swift */,
+				99585A962A2ECE640026DF58 /* addcalendarView.swift */,
+				99585A982A2ED0020026DF58 /* calendaritemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			files = (
 				99FC0DEA2A2E10E300FDF879 /* calendarView.swift in Sources */,
 				99D93C282A26BF78003F421F /* SchoolCalanderApp.swift in Sources */,
+				99585A972A2ECE650026DF58 /* addcalendarView.swift in Sources */,
 				99D93C362A26C93E003F421F /* mainView.swift in Sources */,
+				99585A992A2ED0020026DF58 /* calendaritemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

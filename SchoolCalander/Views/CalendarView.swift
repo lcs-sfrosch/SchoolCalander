@@ -13,11 +13,19 @@ struct calendarView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             HStack {
                 Text("Calendar")
                     .font(.largeTitle)
                 Spacer()
+                Image(systemName: "plus")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.accentColor)
+                
             }
+            .frame(width: 340, height: 30)
+            
             
             VStack {
                 List {
@@ -25,13 +33,21 @@ struct calendarView: View {
                         ForEach(items.indices, id: \.self) { index in
                             RoundedRectangle(cornerRadius: 10)
                                 .strokeBorder(Color.black, lineWidth: 2)
+                                .cornerRadius(10)
+                       
+                                .frame(width:350, height: 75)
                         }
                     }
                 }
+                .listStyle(.plain)
+                .listRowInsets(EdgeInsets())
             }
-            .frame(width: 350, height: 500)
+            .frame(width: 350, height: 700)
             .cornerRadius(10)
         }
+      //  .navigationBarBackButtonHidden(true)
+       // .navigationBarItems(leading: backButton)
+        
     }
 }
 
