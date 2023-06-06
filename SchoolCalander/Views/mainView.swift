@@ -21,12 +21,15 @@ struct mainView: View {
                     Text("Calendar")
                         .font(.largeTitle)
                     Spacer()
-                    Image(systemName: "plus")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(.accentColor)
-                        .padding()
-                    
+                    Menu("plus") {
+                        Button("Calendar")
+                        Button("Class")
+                        
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.accentColor)
+                            .padding()
+                    }
                     
                 }
                 .frame(width:350, height: 10)
@@ -60,7 +63,8 @@ struct mainView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .strokeBorder(Color.black, lineWidth: 2)
                                     .cornerRadius(10)
-                                    .frame(width:350, height: 100)
+                                    .frame(width:350, height: 100
+                                    )
                                 
                                 
                             }
@@ -77,7 +81,7 @@ struct mainView: View {
             }
         }
     }
-  
+    
     
     
     struct mainView_Previews: PreviewProvider {
