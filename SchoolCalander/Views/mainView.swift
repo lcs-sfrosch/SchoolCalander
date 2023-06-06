@@ -9,6 +9,17 @@ import SwiftUI
 
 struct mainView: View {
     
+//    @Environment(\.blackbirdDatabase) var db:
+//    Blackbird.Database?
+//
+//    @BlackbirdLiveModels({ db in
+//        try await TodoItem.read(from: db)
+//    }) var Class
+//
+//    @State var classItem: [classItem] = []
+//    @State var newDescription: String = ""
+//
+    
     let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10"]
     
     let classes = ["Math", "Science", "History", "English"]
@@ -30,7 +41,6 @@ struct mainView: View {
                     }
                 label: {
                     Label("", systemImage: "plus")
-                        
                         }
               
 

@@ -9,15 +9,15 @@
 //
 ////let name: String
 //
-//struct classItemView: View {
+//struct classitemView: View {
 //    var body: some View {
 //    Text(name)
 //
 //    }
 //}
 //
-//struct classItemView_Previews: PreviewProvider {
+//struct classitemView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        classItemView()
+//        classitemView()
 //    }
 //}
