@@ -13,6 +13,9 @@ struct mainView: View {
     
     let classes = ["Math", "Science", "History", "English"]
     
+    func addCalendarItem() { }
+    func addClassItem() { }
+    
     var body: some View {
         
         NavigationView {
@@ -21,15 +24,16 @@ struct mainView: View {
                     Text("Calendar")
                         .font(.largeTitle)
                     Spacer()
-                    Menu("plus") {
-                        Button("Calendar")
-                        Button("Class")
-                        
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.accentColor)
-                            .padding()
+                    Menu {
+                        Button("Calendar", action: addCalendarItem)
+                        Button("Class", action: addClassItem)
                     }
+                label: {
+                    Label("", systemImage: "plus")
+                        
+                        }
+              
+
                     
                 }
                 .frame(width:350, height: 10)
