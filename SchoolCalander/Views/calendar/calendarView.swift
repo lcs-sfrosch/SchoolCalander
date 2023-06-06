@@ -18,10 +18,10 @@ struct calendarView: View {
                 Text("Calendar")
                     .font(.largeTitle)
                 Spacer()
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.accentColor)
+//                Image(systemName: "plus")
+//                    .resizable()
+//                    .frame(width: 30, height: 30)
+//                    .foregroundColor(.accentColor)
                 
             }
             .frame(width: 340, height: 30)
