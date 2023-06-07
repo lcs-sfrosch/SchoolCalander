@@ -6,11 +6,21 @@
 //
 import SwiftUI
 
-struct addcalendarview: View {
+struct addcalendarView: View {
+    
+    @State private var showingCredits = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Show Credits") {
+            showingCredits.toggle()
+        }
+        .sheet(isPresented: $showingCredits) {
+            Text("This app was brought to you by Hacking with Swift")
+                .presentationDetents([.medium, .large])
+        }
     }
 }
+
 
 struct addcalendarview_Previews: PreviewProvider {
     static var previews: some View {
