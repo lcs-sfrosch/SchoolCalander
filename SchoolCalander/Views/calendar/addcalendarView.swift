@@ -4,12 +4,17 @@
 //
 //  Created by Sebastian Frosch on 05.06.23.
 //
+import Blackbird
 import SwiftUI
 
 struct addcalendarView: View {
     
     @State private var showingCredits = false
     
+    let name: String = "Math"
+    let date: Int = 1
+    let description: String = "Math Homework"
+   
     var body: some View {
         Button("Show Credits") {
             showingCredits.toggle()
@@ -25,6 +30,7 @@ struct addcalendarView: View {
 struct addcalendarview_Previews: PreviewProvider {
     static var previews: some View {
         addcalendarview()
+            .environment(\.blackbirdDatabase,AppDatabase.instance)
     }
 }
 

@@ -85,6 +85,8 @@ struct mainView: View {
                     
                     
                 }
+                .frame(width: 350, height: 700)
+                .cornerRadius(10)
                 
                 
             }
