@@ -7,7 +7,7 @@
 import Blackbird
 import SwiftUI
 
-struct addcalssView: View {
+struct addclassView: View {
     
     @State private var showingCredits = false
     
@@ -27,7 +27,7 @@ struct addcalssView: View {
 }
 struct addcalssview_Previews: PreviewProvider {
     static var previews: some View {
-        addcalssView()
+        addclassView()
             .environment(\.blackbirdDatabase,AppDatabase.instance)
     }
 }

@@ -74,18 +74,17 @@ struct mainView: View {
                     
                     List(Classes.results) { currentClass in
                         classitemView(name: currentClass.name)
-                        
-                        
-                        
+                            .listRowSeparator(.hidden)
+                           
                     }
                     .listStyle(.plain)
-                    .listRowInsets(EdgeInsets())
+                   
                     
                     
                     
                     
                 }
-                .frame(width: 350, height: 700)
+                .frame(width: 350, height: 530)
                 .cornerRadius(10)
                 
                 

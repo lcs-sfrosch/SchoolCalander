@@ -27,9 +27,9 @@ struct addcalendarView: View {
         
     }
 }
-struct addcalendarview_Previews: PreviewProvider {
+struct addcalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        addcalendarview()
+        addcalendarView()
             .environment(\.blackbirdDatabase,AppDatabase.instance)
     }
 }
