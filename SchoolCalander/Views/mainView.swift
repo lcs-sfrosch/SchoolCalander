@@ -38,6 +38,7 @@ struct mainView: View {
                         }
                         NavigationLink(destination: addclassView()) {
                             Button("Class", action: addClassItem)
+                        
                         }
                     }
                 label: {
