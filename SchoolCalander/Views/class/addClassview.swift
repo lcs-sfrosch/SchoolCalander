@@ -9,17 +9,11 @@ import SwiftUI
 
 struct addclassView: View {
     
-    @State private var showingCredits = false
-    
-    let name: String = "Math"
 
     var body: some View {
-        Button("Show Credits") {
-            showingCredits.toggle()
-        }
-        .sheet(isPresented: $showingCredits) {
-            Text("This app was brought to you by Hacking with Swift")
-                .presentationDetents([.medium, .large])
+        
+        VStack {
+            Text("Add Class View")
         }
         
         

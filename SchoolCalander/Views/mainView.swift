@@ -21,8 +21,7 @@ struct mainView: View {
     
     let name = ["Math", "Science", "History", "English"]
     
-    func addcalendaritem() { }
-    func addclassitem() { }
+    @State var addSheetShowing = false
     
     var body: some View {
         
@@ -32,14 +31,15 @@ struct mainView: View {
                     Text("Calendar")
                         .font(.largeTitle)
                     Spacer()
+                    
                     Menu {
-                        NavigationLink(destination: addcalendarView()) {
-                            Button("Calendar", action: addcalendaritem)
-                        }
-                        NavigationLink(destination: addclassView()) {
-                            Button("Class", action: addclassitem)
+                        Button("Calendar", action: {
+                            addSheetShowing = true
+                        })
                         
-                        }
+                        Button("Class", action: {
+                            
+                        })
                     }
                 label: {
                     Label("", systemImage: "plus")
@@ -74,6 +74,7 @@ struct mainView: View {
                     
                     List(Classes.results) { currentClass in
                         classitemView(name: currentClass.name)
+                    
                             .listRowSeparator(.hidden)
                            
                     }
@@ -89,6 +90,12 @@ struct mainView: View {
                 
                 
             }
+            .sheet(isPresented: $addSheetShowing) {
+                addcalendarView()
+                    .presentationDetents([.fraction(0.3)])
+            }
+            
+
             
         }
     }
