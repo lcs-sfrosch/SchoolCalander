@@ -7,21 +7,30 @@
 import Blackbird
 import SwiftUI
 
-//let name: String
+
 
 struct classitemView: View {
     
-    let name = "Math"
-    
+    let name: String
+   
     var body: some View {
       
-    Text(name)
-
+        HStack{
+            ZStack{
+                Text(name)
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.black, lineWidth: 2)
+                    .cornerRadius(10)
+                    .frame(width:350, height: 50)
+                
+            }
+        }
     }
 }
 
 struct classitemView_Previews: PreviewProvider {
     static var previews: some View {
-        classitemView()
+        classitemView(name: "math")
+            .environment(\.blackbirdDatabase,AppDatabase.instance)
     }
 }

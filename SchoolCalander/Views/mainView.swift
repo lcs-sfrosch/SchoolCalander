@@ -14,19 +14,12 @@ struct mainView: View {
     
     @BlackbirdLiveModels({ db in
         try await Class.read(from: db)
-    }) var livemainView
-    
-    @State var name: String = ""
-    @State var description: String = ""
-    @State var date: Int = 1
+    }) var Classes
     
     
     
-    //
     
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10"]
-    
-    let classes = ["Math", "Science", "History", "English"]
+    let name = ["Math", "Science", "History", "English"]
     
     func addCalendarItem() { }
     func addClassItem() { }
@@ -40,8 +33,12 @@ struct mainView: View {
                         .font(.largeTitle)
                     Spacer()
                     Menu {
-                        Button("Calendar", action: addCalendarItem)
-                        Button("Class", action: addClassItem)
+                        NavigationLink(destination: addcalendarView()) {
+                            Button("Calendar", action: addCalendarItem)
+                        }
+                        NavigationLink(destination: addclassView()) {
+                            Button("Class", action: addClassItem)
+                        }
                     }
                 label: {
                     Label("", systemImage: "plus")
@@ -65,7 +62,7 @@ struct mainView: View {
                 }
                 
                 HStack{
-                    
+        
                     Text("Classes")
                         .font(.largeTitle)
                     Spacer()
@@ -74,38 +71,36 @@ struct mainView: View {
                 
                 VStack {
                     
-                    List {
-                        ScrollView {
-                            
-                            ForEach(items.indices, id: \.self){ index in
-                                RoundedRectangle(cornerRadius: 10)
-                                    .strokeBorder(Color.black, lineWidth: 2)
-                                    .cornerRadius(10)
-                                    .frame(width:350, height: 100
-                                    )
-                                
-                                
-                            }
-                        }
+                    List(Classes.results) { currentClass in
+                        classitemView(name: currentClass.name)
+                        
+                        
+                        
                     }
                     .listStyle(.plain)
                     .listRowInsets(EdgeInsets())
                     
+                    
+                    
+                    
                 }
-                .frame(width:350, height: 500)
-                .cornerRadius(10)
+                
                 
             }
+            
         }
     }
+    
+    
     
     
     
     struct mainView_Previews: PreviewProvider {
         static var previews: some View {
-          mainView()
+            mainView()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
-
-
+                                   
+                                   

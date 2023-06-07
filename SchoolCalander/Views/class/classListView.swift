@@ -4,17 +4,34 @@
 //
 //  Created by Sebastian Frosch on 05.06.23.
 //
-
+import Blackbird
 import SwiftUI
 
 struct classlistView: View {
+    
+    @BlackbirdLiveModels({ db in
+        try await Class.read(from: db)
+    }) var Classes
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+     
+            List(Classes.results) { currentClass in
+                classitemView(name: currentClass.name)
+                    .listStyle(.plain)
+                    .listRowInsets(EdgeInsets())
+                   
+                    
+           
+        }
+        
+           
+          
     }
+    
 }
-
 struct classlistView_Previews: PreviewProvider {
     static var previews: some View {
         classlistView()
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }

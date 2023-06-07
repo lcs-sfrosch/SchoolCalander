@@ -24,8 +24,8 @@ struct AppDatabase {
                 .path
             print("Database may exist already at this location:")
             print(dbPath)
-
-            // DEBUG: Ensure that database is copied again from app bundle
+//
+////             DEBUG: Ensure that database is copied again from app bundle
 //            print("Removing existing database... ", terminator: "")
 //            try fileManager.removeItem(atPath: dbPath)
 //            // Remove temporary files too
