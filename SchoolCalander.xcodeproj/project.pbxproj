@@ -15,6 +15,7 @@
 		99585AA22A2ED8D90026DF58 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99585AA12A2ED8D90026DF58 /* Class.swift */; };
 		99585AA42A2EDA0A0026DF58 /* classitemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99585AA32A2EDA0A0026DF58 /* classitemView.swift */; };
 		99585AA82A2EDC280026DF58 /* classlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99585AA72A2EDC280026DF58 /* classlistView.swift */; };
+		99BA87532A2FFD4B008185DB /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 99BA87522A2FFD4B008185DB /* Blackbird */; };
 		99D93C282A26BF78003F421F /* SchoolCalanderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D93C272A26BF78003F421F /* SchoolCalanderApp.swift */; };
 		99D93C2C2A26BF79003F421F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2B2A26BF79003F421F /* Assets.xcassets */; };
 		99D93C2F2A26BF79003F421F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D93C2E2A26BF79003F421F /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BA87532A2FFD4B008185DB /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,11 +92,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		99BA87512A2FFD4B008185DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99D93C1B2A26BF78003F421F = {
 			isa = PBXGroup;
 			children = (
 				99D93C262A26BF78003F421F /* SchoolCalander */,
 				99D93C252A26BF78003F421F /* Products */,
+				99BA87512A2FFD4B008185DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +152,9 @@
 			dependencies = (
 			);
 			name = SchoolCalander;
+			packageProductDependencies = (
+				99BA87522A2FFD4B008185DB /* Blackbird */,
+			);
 			productName = SchoolCalander;
 			productReference = 99D93C242A26BF78003F421F /* SchoolCalander.app */;
 			productType = "com.apple.product-type.application";
@@ -419,6 +432,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99BA87522A2FFD4B008185DB /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99FC0DEB2A2E145D00FDF879 /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99D93C1C2A26BF78003F421F /* Project object */;
 }

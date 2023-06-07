@@ -11,18 +11,18 @@ struct mainView: View {
     
     @Environment(\.blackbirdDatabase) var db:
     Blackbird.Database?
-
+    
     @BlackbirdLiveModels({ db in
-        try await TodoItem.read(from: db)
-    }) var Class
-
-    @State var className: [className] = []
+        try await Class.read(from: db)
+    }) var livemainView
+    
+    @State var name: String = ""
     @State var description: String = ""
-    @State var date: Int
+    @State var date: Int = 1
     
     
     
-//
+    //
     
     let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10"]
     
@@ -45,9 +45,9 @@ struct mainView: View {
                     }
                 label: {
                     Label("", systemImage: "plus")
-                        }
-              
-
+                }
+                    
+                    
                     
                 }
                 .frame(width:350, height: 10)
@@ -103,7 +103,7 @@ struct mainView: View {
     
     struct mainView_Previews: PreviewProvider {
         static var previews: some View {
-            mainView()
+          mainView()
         }
     }
 }

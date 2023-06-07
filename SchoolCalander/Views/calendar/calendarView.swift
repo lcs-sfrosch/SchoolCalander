@@ -18,10 +18,10 @@ struct calendarView: View {
                 Text("Calendar")
                     .font(.largeTitle)
                 Spacer()
-//                Image(systemName: "plus")
-//                    .resizable()
-//                    .frame(width: 30, height: 30)
-//                    .foregroundColor(.accentColor)
+                //                Image(systemName: "plus")
+                //                    .resizable()
+                //                    .frame(width: 30, height: 30)
+                //                    .foregroundColor(.accentColor)
                 
             }
             .frame(width: 340, height: 30)
@@ -34,7 +34,7 @@ struct calendarView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .strokeBorder(Color.black, lineWidth: 2)
                                 .cornerRadius(10)
-                       
+                            
                                 .frame(width:350, height: 100)
                         }
                     }
@@ -45,8 +45,8 @@ struct calendarView: View {
             .frame(width: 350, height: 700)
             .cornerRadius(10)
         }
-      //  .navigationBarBackButtonHidden(true)
-       // .navigationBarItems(leading: backButton)
+        //  .navigationBarBackButtonHidden(true)
+        // .navigationBarItems(leading: backButton)
         
     }
 }

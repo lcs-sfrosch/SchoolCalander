@@ -10,7 +10,11 @@ import SwiftUI
 //let name: String
 
 struct classitemView: View {
+    
+    let name = "Math"
+    
     var body: some View {
+      
     Text(name)
 
     }

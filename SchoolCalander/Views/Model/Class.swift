@@ -9,8 +9,8 @@ import Blackbird
 import Foundation
 
 struct Class: BlackbirdModel{
-    @Blackbirdcolumn var id: Int
-    @Blackbirdcolumn var name: String
+    @BlackbirdColumn var id: Int
+    @BlackbirdColumn var name: String
 
 
 
