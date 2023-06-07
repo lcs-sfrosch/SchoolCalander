@@ -7,14 +7,25 @@
 
 import SwiftUI
 
-struct addclassview: View {
+struct addcalssView: View {
+    
+    @State private var showingCredits = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Show Credits") {
+            showingCredits.toggle()
+        }
+        .sheet(isPresented: $showingCredits) {
+            Text("This app was brought to you by Hacking with Swift")
+                .presentationDetents([.medium, .large])
+        }
+        
+        
+    }
+}
+struct addcalssview_Previews: PreviewProvider {
+    static var previews: some View {
+        addcalssView()
     }
 }
 
-struct addclassview_Previews: PreviewProvider {
-    static var previews: some View {
-        addclassview()
-    }
-}

@@ -32,7 +32,7 @@ struct calendaritemView: View {
 
 struct calendaritemView_Previews: PreviewProvider {
     static var previews: some View {
-        calendaritemView(name: "math")
+        calendaritemView()
             .environment(\.blackbirdDatabase,AppDatabase.instance)
     }
 }

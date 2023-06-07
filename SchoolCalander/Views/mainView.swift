@@ -21,8 +21,8 @@ struct mainView: View {
     
     let name = ["Math", "Science", "History", "English"]
     
-    func addCalendarItem() { }
-    func addClassItem() { }
+    func addcalendaritem() { }
+    func addclassitem() { }
     
     var body: some View {
         
@@ -34,10 +34,10 @@ struct mainView: View {
                     Spacer()
                     Menu {
                         NavigationLink(destination: addcalendarView()) {
-                            Button("Calendar", action: addCalendarItem)
+                            Button("Calendar", action: addcalendaritem)
                         }
                         NavigationLink(destination: addclassView()) {
-                            Button("Class", action: addClassItem)
+                            Button("Class", action: addclassitem)
                         
                         }
                     }
