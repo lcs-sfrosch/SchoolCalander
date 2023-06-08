@@ -18,11 +18,12 @@ struct classitemView: View {
         HStack{
             ZStack{
                 Text(name)
+              
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.black, lineWidth: 2)
                     .cornerRadius(10)
                     .frame(width:350, height: 50)
-                
+               
             }
         }
     }

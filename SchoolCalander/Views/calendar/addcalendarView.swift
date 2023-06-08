@@ -9,12 +9,10 @@ import SwiftUI
 
 struct addcalendarView: View {
     
-    let name: String = "Math"
-    let date: Int = 1
-    let description: String = "Math Homework"
-    
-    func addcalendaritem() { }
-    func addclassitem() { }
+    @State var name: String = "Math"
+    @State var date: Int = 1
+    @State var description: String = "Math Homework"
+
     
     var body: some View {
         

@@ -12,14 +12,14 @@ import SwiftUI
 
 struct calendaritemView: View {
     
-    let name: String = "Math"
-    let date: Int = 1
-    let description: String = "Math Homework"
+    var name: String = "Math"
+    var date: Int = 1
+    var description: String = "Math Homework"
+   
     var body: some View {
       
         HStack{
             ZStack{
-                Text(name)
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.black, lineWidth: 2)
                     .cornerRadius(10)

@@ -21,7 +21,8 @@ struct mainView: View {
     
     let name = ["Math", "Science", "History", "English"]
     
-    @State var addSheetShowing = false
+    @State var addCalendarSheetShowing = false
+    @State var addClassSheetShowing = false
     
     var body: some View {
         
@@ -34,11 +35,11 @@ struct mainView: View {
                     
                     Menu {
                         Button("Calendar", action: {
-                            addSheetShowing = true
+                            addCalendarSheetShowing = true
                         })
                         
                         Button("Class", action: {
-                            
+                            addClassSheetShowing = true
                         })
                     }
                 label: {
@@ -63,7 +64,7 @@ struct mainView: View {
                 }
                 
                 HStack{
-        
+                    
                     Text("Classes")
                         .font(.largeTitle)
                     Spacer()
@@ -74,35 +75,28 @@ struct mainView: View {
                     
                     List(Classes.results) { currentClass in
                         classitemView(name: currentClass.name)
-                    
                             .listRowSeparator(.hidden)
-                           
+                        
                     }
                     .listStyle(.plain)
-                   
-                    
-                    
-                    
                     
                 }
+                
                 .frame(width: 350, height: 530)
                 .cornerRadius(10)
                 
-                
             }
-            .sheet(isPresented: $addSheetShowing) {
+            .sheet(isPresented: $addCalendarSheetShowing) {
                 addcalendarView()
-                    .presentationDetents([.fraction(0.3)])
+                    .presentationDetents([.fraction(0.5)])
             }
-            
-
-            
+                    .sheet(isPresented: $addClassSheetShowing) {
+                        addclassView()
+                            .presentationDetents([.fraction(0.5)])
+                        
+            }
         }
     }
-    
-    
-    
-    
     
     struct mainView_Previews: PreviewProvider {
         static var previews: some View {
@@ -111,5 +105,5 @@ struct mainView: View {
         }
     }
 }
-                                   
-                                   
+
+
