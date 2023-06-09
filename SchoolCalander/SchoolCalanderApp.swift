@@ -12,6 +12,8 @@ struct SchoolCalanderApp: App {
     var body: some Scene {
         WindowGroup {
             mainView()
+                .environment(\.blackbirdDatabase,AppDatabase.instance)
+
         }
     }
 }

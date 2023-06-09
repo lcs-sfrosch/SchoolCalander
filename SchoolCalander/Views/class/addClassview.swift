@@ -9,6 +9,9 @@ import SwiftUI
 
 struct addclassView: View {
     
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
+
+    
     @State var name: String = ""
     
     var body: some View {
@@ -18,9 +21,24 @@ struct addclassView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(height: 30)
                     .padding()
-                
+            
+                Button(action: {
+                                     Task{
+                                         try await db!.transaction { core in
+                                             try core.query("INSERT INTO Class (name) VALUES (?)", name)
+                                             
+                                         }
+                                         name = ""
+                                     }
+                                 }, label:{
+                                     Text("ADD")
+                                         .font(.title2)
+                                     
+                                 })
             }
             .frame(width:350, height: 20)
+                
+           
         }
     }
 }
