@@ -20,10 +20,13 @@ struct addcalendarView: View {
         VStack {
             HStack{
                 Picker("Classes", selection: $name) {
-                    ForEach(name, id: \.self) {
-                        Text(name)
-                            .frame(height: 30)
-                    }
+                    Text("Math").tag(1)
+                    Text("English").tag(2)
+                    Text("Art").tag(3)
+//                    ForEach(name, id: \.self) {
+//                        Text(name)
+//                            .frame(height: 30)
+//                    }
                 }
                 .pickerStyle(.menu)
             }

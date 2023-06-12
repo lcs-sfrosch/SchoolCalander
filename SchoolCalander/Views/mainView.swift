@@ -90,10 +90,10 @@ struct mainView: View {
                 addcalendarView()
                     .presentationDetents([.fraction(0.5)])
             }
-                    .sheet(isPresented: $addClassSheetShowing) {
-                        addclassView()
-                            .presentationDetents([.fraction(0.5)])
-                        
+            .sheet(isPresented: $addClassSheetShowing) {
+                addclassView()
+                    .presentationDetents([.fraction(0.5)])
+                
             }
         }
     }
